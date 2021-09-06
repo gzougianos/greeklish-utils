@@ -2,8 +2,8 @@
 # equals() and contains() methods for char sequences ignoring difference between Greek-Latin characters
 Not something try-hard. Useful for simple searches in applications. For example the string `θα πάω για καφέ` contains the string `kafe`. 
 Letters with Greek [diacritics](https://en.wikipedia.org/wiki/Greek_diacritics) are considered equal to the Latin corresponding letters. 
-With other words all these are equal: `υ`, `ύ`, `ϋ`, `ΰ`, `u`. [Dipthongs][1] are also taken in consideration. 
-The string `θα φάω ψάρι` is equals to `tha faw psari`. 
+In other words all these are equal: `υ`, `ύ`, `ϋ`, `ΰ`, `u`. [Dipthongs][1] are also taken in consideration. 
+The string `θα φάω ψάρι` is equal to `tha faw psari`. 
 The ignorance happens in both directions, meaning `η πέtra` contains `peτρα`. Take a look to `Tester.java` to see other cases.
 
 The algorithm uses the [naive][2] approach of string searching. In terms of performance, the algorithm is not close to JDK's [String#contains][3] method. 
